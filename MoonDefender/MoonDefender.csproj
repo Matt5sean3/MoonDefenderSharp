@@ -33,7 +33,6 @@
   <ItemGroup>
     <Compile Include="IEntity.cs" />
     <Compile Include="IBoundingShape.cs" />
-    <Compile Include="MoonDefender.cs" />
     <Compile Include="BoundingBox.cs" />
     <Compile Include="BoundingCircle.cs" />
     <Compile Include="ICollision.cs" />
@@ -41,9 +40,80 @@
     <Compile Include="EntityCollision.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Vector2.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+    </Compile>
+    <Compile Include="Ballistic.cs" />
+    <Compile Include="DropShip.cs" />
+    <Compile Include="MoonDefender.cs">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>MoonDefender.MoonDefender.cs</LogicalName>
+    </Compile>
+    <Compile Include="IScreen.cs" />
+    <Compile Include="Screen.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="MenuScreen.cs" />
+    <Compile Include="IOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <Package>monodevelop</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MoonDefender.ico">
+      <LogicalName>MoonDefender.MoonDefender.icon</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\explosion.ogg" />
+    <EmbeddedResource Include="Resources\hackrva.png">
+      <LogicalName>MoonDefender.SplashScreen.image</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\joystix_monospace.ttf">
+      <LogicalName>MoonDefender.MoonDefender.joystix</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\random_text.txt">
+      <LogicalName>MoonDefender.SplashScreen.introText</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40px_Moon.png" />
+    <None Include="Resources\ambient.ogg" />
+    <None Include="Resources\blaster.ogg" />
+    <None Include="Resources\crosshair.ico" />
+    <None Include="Resources\cutScene1.png" />
+    <None Include="Resources\cutScene2.png" />
+    <None Include="Resources\cutScene3.png" />
+    <None Include="Resources\cutScene4.png" />
+    <None Include="Resources\cutScene5.png" />
+    <None Include="Resources\cutScene6.png" />
+    <None Include="Resources\cutScene7.png" />
+    <None Include="Resources\cutScene8.png" />
+    <None Include="Resources\cutScene9.png" />
+    <None Include="Resources\cutScene10.png" />
+    <None Include="Resources\format.css" />
+    <None Include="Resources\gameover.png" />
+    <None Include="Resources\hackrva.svg" />
+    <None Include="Resources\level_eight.json" />
+    <None Include="Resources\level_five.json" />
+    <None Include="Resources\level_four.json" />
+    <None Include="Resources\level_nine.json" />
+    <None Include="Resources\level_one.json" />
+    <None Include="Resources\level_seven.json" />
+    <None Include="Resources\level_six.json" />
+    <None Include="Resources\level_ten.json" />
+    <None Include="Resources\level_three.json" />
+    <None Include="Resources\level_two.json" />
+    <None Include="Resources\menuBackground.png" />
+    <None Include="Resources\theme1.ogg" />
+    <None Include="Resources\torpedo.ogg" />
+    <None Include="Resources\victory.png" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

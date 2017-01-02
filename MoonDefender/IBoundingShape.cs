@@ -4,6 +4,6 @@ namespace MoonDefender
 {
 	public interface IBoundingShape
 	{
-		bool Check(Tuple<double, double> relativePosition);
+		bool Check(Vector2 relativePosition);
 	}
 }

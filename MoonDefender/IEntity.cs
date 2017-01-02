@@ -11,7 +11,7 @@ namespace MoonDefender
 		/*
 		 *  The current position of the object
 		 */
-		Tuple<double, double> Position 
+		Vector2 Position 
 		{
 			get;
 		}
@@ -28,7 +28,7 @@ namespace MoonDefender
 		/*
 		 *  Add an object with mass to calculate gravity against
 		 */
-		void AddPeer (IMass mass);
+		void AddPeer (IEntity mass);
 
 		/*
 		 *  The bounding box to use for the object

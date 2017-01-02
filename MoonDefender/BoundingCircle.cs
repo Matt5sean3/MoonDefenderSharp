@@ -5,16 +5,15 @@ namespace MoonDefender
 	public class BoundingCircle : IBoundingShape
 	{
 		private double radius;
+
 		public BoundingCircle (double newRadius)
 		{
 			radius = newRadius;
 		}
 
-		public bool Check(Tuple<double, double> relativeLocation)
+		public bool Check(Vector2 relativeLocation)
 		{
-			return relativeLocation.Item1 * relativeLocation.Item1 + 
-				relativeLocation.Item2 * relativeLocation.Item2 <=
-				radius * radius;
+			return relativeLocation.Length2 <= radius * radius;
 		}
 	}
 }

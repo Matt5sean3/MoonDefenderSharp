@@ -4,21 +4,24 @@ namespace MoonDefender
 {
 	public class BoundingBox : IBoundingShape
 	{
-		private double width;
-		private double height;
+		Vector2 offset;
+		Vector2 dims;
 
-		public BoundingBox (double newWidth, double newHeight)
+		public BoundingBox (
+			Vector2 newOffset,
+			Vector2 newDims)
 		{
-			width = newWidth;
-			height = newHeight;
+			offset = newOffset;
+			dims = newDims;
 		}
 
-		public bool Check(Tuple<double, double> relativePosition)
+		public bool Check(Vector2 relativePosition)
 		{
-			return relativePosition.Item1 > 0 && 
-				relativePosition.Item1 < width &&
-				relativePosition.Item2 > 0 && 
-				relativePosition.Item2 < height;
+			Vector2 position = relativePosition - offset;
+			return position.X >= 0 && 
+				position.X <= dims.X &&
+				position.Y >= 0 && 
+				position.Y <= dims.Y;
 		}
 	}
 }
